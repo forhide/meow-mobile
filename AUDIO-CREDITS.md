@@ -1,22 +1,21 @@
-# Audio sources
+# Current audio sources
 
-The Meowgnificent melodies, harmony, arrangements and Foley designs in this
-update are original to this project. No existing soundtrack, demo MIDI,
-third-party recording or vocal sample is copied.
+The four original Meowgnificent piano themes use fixed, repeating motifs and simple triad accompaniment written for this game. No existing soundtrack or demo MIDI was copied.
 
-Music and a few quiet instrument/wooden reward cues are rendered using
-**GeneralUser GS 2.0.3**, by S. Christian Collins, with FluidSynth.
+## Recorded piano
 
-- Author/project: https://www.schristiancollins.com/generaluser
-- Source: https://github.com/mrbumpy409/GeneralUser-GS
-- Pinned revision: `684543d5e5efaef08d02be50dcda8d552478fa60`
-- SoundFont SHA256: `9575028c7a1f589f5770fccc8cff2734566af40cd26ed836944e9a5152688cfe`
-- Full upstream license: `tools/audio/GeneralUser-GS-LICENSE.txt`.
+- **Salamander Grand Piano v3**, recorded by **Alexander Holm**, 48kHz/24-bit, soft velocity layer4.
+- Original: https://archive.org/details/SalamanderGrandPianoV3
+- FLAC conversion / SFZ remap: **kinwie**, sfzinstruments: https://github.com/sfzinstruments/SalamanderGrandPiano
+- Pinned revision: `3382bf9496bba2486f5ab0de55a264d1dfc38404`.
+- License: **Creative Commons Attribution 3.0 Unported**, https://creativecommons.org/licenses/by/3.0/ . Full text is `docs/SALAMANDER-LICENSE.txt` and `tools/audio/Salamander-LICENSE.txt`.
+- Modifications: selected soft piano recordings were decoded, retuned to the score pitches, sequenced into the project's original score, filtered gently and rendered as OGG loops. The original SFZ mapping is not bundled.
+- Sample SHA256/source manifest: `tools/audio/piano_samples.json`; original score: `piano_score.json`; renderer: `render_piano_score.py`.
 
-The license permits private/commercial music creation and profit from the
-resulting recordings. The SoundFont itself is not bundled in the game or
-committed to this repository; only the rendered recordings are shipped.
+## Effects
 
-Air, paper, cloth, crackle and cushioned impact cues are original filtered
-noise/impulse Foley synthesis, not field recordings. FluidSynth, NumPy,
-SciPy and FFmpeg are offline authoring tools, not runtime dependencies.
+The 17 short, clean effects are original deterministic synthesis, revised from the v0.40 palette with gentler pitch, attack/release and a 3kHz low-pass. No external effect recording is used. They are rendered offline by `tools/generate_sound_palette.py`.
+
+## Earlier drafts
+
+The earlier GeneralUser GS / FluidSynth chamber-music authoring scripts and score remain in tools/audio for provenance. They no longer generate the current runtime recordings. GeneralUser GS is by S. Christian Collins; its full license remains `GeneralUser-GS-LICENSE.txt`. No SoundFont or full piano sample library is bundled with the game. Only finished recordings and attribution are distributed.

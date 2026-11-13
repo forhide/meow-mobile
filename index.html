@@ -93,7 +93,52 @@ body {
 		<link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
 <link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
 <link rel="manifest" href="index.manifest.json">
-<meta name="description" content="Meowgnificent the wizard cat. A very round cat. A very unreliable wizard."><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Meowgnificent"><style>html,body{touch-action:none;overscroll-behavior:none;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}</style><script>(function(){var armed=true;function go(){if(!armed||!matchMedia('(pointer: coarse)').matches)return;var d=document.documentElement,r=d.requestFullscreen||d.webkitRequestFullscreen;if(!r)return;armed=false;var lock=function(){if(screen.orientation&&screen.orientation.lock)screen.orientation.lock('landscape').catch(function(){});};try{var p=r.call(d,{navigationUI:'hide'});if(p&&p.then)p.then(lock,function(){armed=true;});else lock();}catch(e){armed=true;}}document.addEventListener('fullscreenchange',function(){if(!document.fullscreenElement)armed=true;});document.addEventListener('touchend',go,true);})();</script>
+<meta name="description" content="Meowgnificent the wizard cat. A very round cat. A very unreliable wizard."><meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Meowgnificent"><style>html,body{touch-action:none;overscroll-behavior:none;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}</style><script>(function(){var armed=true;function go(){if(!armed||!matchMedia('(pointer: coarse)').matches)return;var d=document.documentElement,r=d.requestFullscreen||d.webkitRequestFullscreen;if(!r)return;armed=false;var lock=function(){if(screen.orientation&&screen.orientation.lock)screen.orientation.lock('landscape').catch(function(){});};try{var p=r.call(d,{navigationUI:'hide'});if(p&&p.then)p.then(lock,function(){armed=true;});else lock();}catch(e){armed=true;}}document.addEventListener('fullscreenchange',function(){if(!document.fullscreenElement)armed=true;});document.addEventListener('touchend',go,true);})();</script><script>/* MEOW_AUDIO_UNLOCK: install before Godot creates its Web Audio context. */
+(function () {
+  if (window.MeowAudio) return;
+  var contexts = [], callbacks = [], unlocked = false;
+  function resume() {
+    if (!unlocked) return;
+    // Safari's playback session also supports the iPhone silent switch.
+    try { if (navigator.audioSession) navigator.audioSession.type = 'playback'; } catch (_) {}
+    contexts.forEach(function (context) {
+      if (context.state !== 'running' && context.state !== 'closed') {
+        try { var pending = context.resume(); if (pending && pending.catch) pending.catch(function () {}); } catch (_) {}
+      }
+    });
+  }
+  function gesture(event) {
+    if (!event.isTrusted) return;
+    unlocked = true;
+    resume();
+    callbacks.slice().forEach(function (callback) { callback(); });
+  }
+  ['AudioContext', 'webkitAudioContext'].forEach(function (name) {
+    var Original = window[name];
+    if (!Original || Original.__meowWrapped) return;
+    var Wrapped = new Proxy(Original, {construct: function (target, args) {
+      var context = Reflect.construct(target, args);
+      contexts.push(context);
+      context.addEventListener('statechange', function () {
+        if (unlocked && document.visibilityState === 'visible' && context.state === 'interrupted') resume();
+      });
+      return context;
+    }});
+    Wrapped.__meowWrapped = true;
+    window[name] = Wrapped;
+  });
+  ['pointerdown', 'pointerup', 'touchend', 'keydown'].forEach(function (event) {
+    document.addEventListener(event, gesture, {capture: true, passive: true});
+  });
+  document.addEventListener('visibilitychange', function () { if (document.visibilityState === 'visible') resume(); });
+  window.addEventListener('pageshow', resume);
+  window.addEventListener('focus', resume);
+  window.MeowAudio = {
+    resume: resume, contexts: contexts,
+    onGesture: function (callback) { callbacks.push(callback); if (unlocked) callback(); },
+    removeGestureCallback: function (callback) { callbacks = callbacks.filter(function (c) { return c !== callback; }); }
+  };
+})();</script>
 	</head>
 	<body>
 		<canvas id="canvas">
@@ -112,7 +157,7 @@ body {
 
 		<script src="index.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":false,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":67061220,"index.wasm":37700666},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4,"serviceWorker":"index.service.worker.js"};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":false,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":68530536,"index.wasm":37700666},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4,"serviceWorker":"index.service.worker.js"};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
