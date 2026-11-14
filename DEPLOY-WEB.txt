@@ -1,4 +1,4 @@
-Meowgnificent the wizard cat — Web v0.43.2
+Meowgnificent the wizard cat — Web v0.43.3
 
 웹 ZIP의 index.* 파일을 같은 폴더의 HTTPS 정적 호스팅에 올리세요.
 Godot 설치 없이 WebAssembly/WebGL2 브라우저에서 플레이합니다.
