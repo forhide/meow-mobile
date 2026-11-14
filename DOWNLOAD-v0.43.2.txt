@@ -1,0 +1,17 @@
+Meowgnificent the wizard cat — v0.43.2 downloads
+
+Every ZIP is in two pieces because GitHub limits one file to 100 MB.
+Download both pieces of your platform into the same folder, then join them.
+
+  Windows (Command Prompt):
+    copy /b Meowgnificent-v0.43.2-windows.zip.001+Meowgnificent-v0.43.2-windows.zip.002 Meowgnificent-v0.43.2-windows.zip
+  macOS, Apple Silicon (Terminal):
+    cat Meowgnificent-v0.43.2-macos.zip.001 Meowgnificent-v0.43.2-macos.zip.002 > Meowgnificent-v0.43.2-macos.zip
+  Linux:
+    cat Meowgnificent-v0.43.2-linux.zip.001 Meowgnificent-v0.43.2-linux.zip.002 > Meowgnificent-v0.43.2-linux.zip
+  Web (static hosting), same way:
+    cat Meowgnificent-v0.43.2-web.zip.001 Meowgnificent-v0.43.2-web.zip.002 > Meowgnificent-v0.43.2-web.zip
+
+The joined ZIP's SHA-256 is listed in Meowgnificent-v0.43.2-SHA256SUMS.txt
+(Windows: certutil -hashfile <zip> SHA256 · macOS: shasum -a 256 <zip>).
+The title screen shows v0.43.2 at the bottom left.
