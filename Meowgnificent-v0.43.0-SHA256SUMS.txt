@@ -1,0 +1,10 @@
+fec7d3821d45eed754741a9e223f7f6bdfd41695235578b644c5f941ec9adc2b  Meowgnificent-v0.43.0-windows.zip
+aef9230b5dab3857beeb12548d9b4d2d09b5c12ef0a5f1ca97ddd5faa95cb825  Meowgnificent-v0.43.0-linux.zip
+74b3621528d29afa5c52abaaaf59d995348eb815466e2d1677d85a910cdab137  Meowgnificent-v0.43.0-web.zip
+327da9ae6e0e05ffddd0abb787c9e05ad2c9f0353834d487fd214a288713723a  Meowgnificent-v0.43.0-macos.zip
+487954f638521b9af86f206f773335cad3470d052c7414dca97fe5f6aeba49a8  Meowgnificent-v0.43.0-linux.zip.001
+299ddd7bbb44ca9608a1c7fcafd8a386916a93905378528bbafc7a0aa7580d75  Meowgnificent-v0.43.0-linux.zip.002
+577ea4dc258189b0ae10313bc1042e7e312504dae6f1accdffbaecbfafa9334e  Meowgnificent-v0.43.0-macos.zip.001
+380ed425f4109d86e9496530e0f9930fffb9ac85241b0c115977fff52676ba7b  Meowgnificent-v0.43.0-macos.zip.002
+928b6481d398275bd27b4d2a17e79131108d296bc469c5c742b63535853cc4ed  Meowgnificent-v0.43.0-windows.zip.001
+ef1d9a4cbfce3b22d2397c5abac1ba9a67ad24ab782f5970b25191f385bc64f7  Meowgnificent-v0.43.0-windows.zip.002
