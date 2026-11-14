@@ -1,4 +1,4 @@
-Meowgnificent the wizard cat — Web v0.42.1
+Meowgnificent the wizard cat — Web v0.43.0
 
 웹 ZIP의 index.* 파일을 같은 폴더의 HTTPS 정적 호스팅에 올리세요.
 Godot 설치 없이 WebAssembly/WebGL2 브라우저에서 플레이합니다.
@@ -33,6 +33,6 @@ Esc → 저장 후 메인 메뉴를 선택하면 이어 할 수 있습니다.
 유니크 바람 지팡이는 ‘이번엔 진짜 용!’ 특수기를 사용합니다.
 패배하면 이번 원정의 재화·장비는 사라지며 별빛·영구 연구·기록은 보존됩니다.
 
-음악4곡은 고정된 선율을 피아노 녹음 샘플로 연주한 곡입니다. 소리 크기는 설정에서 조정합니다.
+메뉴·오프닝·벌 청소·도서관·정원 음악5곡은 프로젝트 소유자가 제공한 녹음이며, 나머지 장면은 피아노 곡을 유지합니다. 소리 크기는 설정에서 조정합니다.
 엔진·폰트 라이선스와 AUDIO-CREDITS.md, SALAMANDER-LICENSE.txt, GENERALUSER-GS-LICENSE.txt를 함께 제공합니다.
 엔진·샘플 라이선스는 게임 자체의 이용허락을 뜻하지 않습니다.
