@@ -1,6 +1,6 @@
 # Current audio sources
 
-## Owner-supplied music — first five scenes
+## Owner-supplied music
 
 The project owner supplied these recordings on 2026-11-14:
 
@@ -10,8 +10,14 @@ The project owner supplied these recordings on 2026-11-14:
 - Curious Loop — library.
 - Wooden Flute Adventure — forbidden garden.
 
+Added on 2026-11-15:
+
+- Pastel Shop Melody — Pip's first shop (Pip's Picnic).
+- Buant Teamwork — the failed wizards' area.
+
 These are supplied recordings, not compositions by Codex. Original MP3 files,
-upload filenames and SHA256 are preserved under tools/audio/sources/user_music/.
+upload filenames and SHA256 are preserved in tools/audio/sources/user_music/
+(kept outside the working tree; `python3 tools/fetch_originals.py --history` restores it).
 Game copies use constant-gain loudness matching and a 1.5-second tail/head
 overlap for looping, encoded as Vorbis. No new notes, EQ or dynamic compression
 were added. See tools/audio/import_user_music.py and data/music.json.
