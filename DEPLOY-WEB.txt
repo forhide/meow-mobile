@@ -1,4 +1,4 @@
-Meowgnificent the wizard cat — Web v0.57.0
+Meowgnificent the wizard cat — Web v0.58.0
 
 웹 ZIP의 index.* 파일과 music.pck(배경 음악), art.pck(보스방·항구 배경)를 같은 폴더의 HTTPS 정적 호스팅에 올리세요.
 Godot 설치 없이 WebAssembly/WebGL2 브라우저에서 플레이합니다.
