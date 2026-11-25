@@ -4,7 +4,7 @@
 // Incrementing CACHE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 /** @type {string} */
-const CACHE_VERSION = '1795593604|8771372';
+const CACHE_VERSION = '1795613564|40674192';
 /** @type {string} */
 const CACHE_PREFIX = 'Meowgnificent th-sw-cache-';
 const CACHE_NAME = CACHE_PREFIX + CACHE_VERSION;
