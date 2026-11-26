@@ -1,4 +1,4 @@
-Meowgnificent the wizard cat — Web v0.60.0
+Meowgnificent the wizard cat — Web v0.61.0
 
 웹 ZIP의 index.* 파일과 music.pck(배경 음악), art.pck(보스방·항구 배경)를 같은 폴더의 HTTPS 정적 호스팅에 올리세요.
 Godot 설치 없이 WebAssembly/WebGL2 브라우저에서 플레이합니다.
@@ -16,6 +16,7 @@ PWA를 지원하는 브라우저에서는 홈 화면에 추가할 수 있습니�
 
 조작
 WASD/방향키: 이동 · 마우스: 조준 · 클릭/Space: 기본 마법
+동화책 종이 UI·3페이즈 보스 게이지·성장 별 표시·핍/엘레멘탈 드래곤·진화 장비·미니이벤트 새 그림을 적용했습니다.
 Q/우클릭: 장착한 지팡이 특수기 · Shift+방향: 구르기
 I: 가방 · E: 친구 대화/매대 앞 구매/장치 작동/열린 출구
 Enter: 시작/이야기 다음/다음 구역 · Esc: 일시정지/패널 닫기
